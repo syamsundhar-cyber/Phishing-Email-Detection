@@ -1,186 +1,73 @@
-\# 📧 Phishing Email Detection Model
+# Phishing Email Detection Model
 
+A machine learning-based cybersecurity project that analyzes email text and classifies emails as **Phishing** or **Safe** using text and email-related features.
 
+## 🎯 Objective
 
-A machine learning-based cybersecurity project that classifies emails as \*\*Safe\*\* or \*\*Phishing\*\* using textual content and security-related email features.
+The objective of this project is to develop a machine learning model that can identify potentially phishing emails by analyzing their content and detecting patterns commonly associated with suspicious messages.
 
+The model uses:
 
+- Email text
+- URLs
+- Email addresses
+- Suspicious keywords
+- Special characters
+- Numbers and digits
+- Uppercase characters
+- Email length
+- Punctuation patterns
 
-\## 🎯 Project Objective
+## 🚀 Features
 
+- Detects phishing and safe emails
+- Uses TF-IDF for text feature extraction
+- Extracts additional URL and keyword-based features
+- Uses Logistic Regression for classification
+- Displays accuracy, precision, recall, and F1-score
+- Generates a confusion matrix
+- Provides classification report
+- Supports testing a new email interactively
+- Saves model evaluation results to a text file
 
+## 🛠️ Technologies Used
 
-The objective of this project is to develop a phishing email detection model capable of identifying potentially malicious or suspicious emails.
+- Python
+- Pandas
+- Scikit-learn
+- Matplotlib
+- TF-IDF
+- Logistic Regression
 
+## 📊 Dataset
 
+The project uses the **Phishing Email Dataset** containing legitimate and phishing-related email messages.
 
-The model analyzes email text and additional security-related features such as:
+Original dataset:
 
+- Total emails: **82,486**
+- Safe emails: **39,595**
+- Phishing emails: **42,891**
 
+### Data Preprocessing
 
-\- URLs
+The dataset was cleaned before training:
 
-\- Email addresses
+- Removed missing text and labels
+- Removed empty email records
+- Removed duplicate emails
+- Validated class labels
+- Limited extremely large email content
+- Shuffled the dataset
 
-\- Suspicious keywords
+After preprocessing:
 
-\- Special characters
+- Final emails: **82,077**
+- Safe emails: **39,233**
+- Phishing emails: **42,844**
 
-\- Digits
-
-\- Text length
-
-\- Email formatting indicators
-
-
-
-The system classifies each email into one of two categories:
-
-
-
-\- \*\*0 → Safe / Legitimate\*\*
-
-\- \*\*1 → Phishing\*\*
-
-
-
-\---
-
-
-
-\## 🛠️ Technologies Used
-
-
-
-\- Python 3
-
-\- Pandas
-
-\- Scikit-learn
-
-\- Matplotlib
-
-\- Regular Expressions
-
-\- TF-IDF
-
-\- Logistic Regression
-
-\- Sparse Feature Matrices
-
-
-
-\---
-
-
-
-\## 📊 Dataset
-
-
-
-The project uses a public phishing email dataset containing multiple email sources.
-
-
-
-The original dataset contained:
-
-
-
-\- \*\*82,486 emails\*\*
-
-\- \*\*39,595 Safe / Legitimate emails\*\*
-
-\- \*\*42,891 Phishing emails\*\*
-
-
-
-\### Dataset Preparation
-
-
-
-The original dataset was cleaned before model training.
-
-
-
-Cleaning steps included:
-
-
-
-1\. Removing missing email text
-
-2\. Removing empty emails
-
-3\. Removing duplicate emails
-
-4\. Validating classification labels
-
-5\. Limiting extremely large email text
-
-6\. Shuffling the dataset
-
-
-
-After cleaning:
-
-
-
-\- \*\*82,077 emails\*\* remained
-
-\- \*\*39,233 Safe / Legitimate emails\*\*
-
-\- \*\*42,844 Phishing emails\*\*
-
-
-
-The original dataset is not included in this repository because of its large file size.
-
-
-
-\---
-
-
-
-\## 🔄 Project Workflow
-
-
+Class labels:
 
 ```text
-
-Email Dataset
-
-&#x20;     ↓
-
-Data Cleaning
-
-&#x20;     ↓
-
-Text Preprocessing
-
-&#x20;     ↓
-
-TF-IDF Feature Extraction
-
-&#x20;     ↓
-
-URL \& Security Feature Extraction
-
-&#x20;     ↓
-
-Feature Combination
-
-&#x20;     ↓
-
-Train/Test Split
-
-&#x20;     ↓
-
-Logistic Regression
-
-&#x20;     ↓
-
-Email Classification
-
-&#x20;     ↓
-
-Performance Evaluation
-
+0 = Safe / Legitimate
+1 = Phishing
