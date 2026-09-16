@@ -1,0 +1,29 @@
+PHISHING EMAIL DETECTION MODEL RESULTS
+============================================================
+
+Dataset size: 82,077
+Training emails: 65,661
+Testing emails: 16,416
+
+Classification:
+0 = Safe / Legitimate
+1 = Phishing
+
+Accuracy : 98.82%
+Precision: 98.70%
+Recall   : 99.05%
+F1-Score : 98.88%
+
+Confusion Matrix:
+[[7735  112]
+ [  81 8488]]
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+        Safe       0.99      0.99      0.99      7847
+    Phishing       0.99      0.99      0.99      8569
+
+    accuracy                           0.99     16416
+   macro avg       0.99      0.99      0.99     16416
+weighted avg       0.99      0.99      0.99     16416
